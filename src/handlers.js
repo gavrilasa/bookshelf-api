@@ -93,7 +93,6 @@ export const updateBookHandler = (request, h) => {
     }).code(400);
   }
 
-  // Pastikan findIndex dipanggil pada array "books"
   const index = books.findIndex((book) => book.id === bookId);
 
   if (index === -1) {
@@ -125,7 +124,6 @@ export const updateBookHandler = (request, h) => {
 
 export const deleteBookHandler = (request, h) => {
   const { bookId } = request.params;
-  // Pastikan findIndex dipanggil pada array "books"
   const index = books.findIndex((book) => book.id === bookId);
 
   if (index === -1) {
